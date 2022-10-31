@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">UTS_CarissaMC</string>
+    <string-array name="arr_jalurpendaftaran">
+        <item>Jalur tanpa tes</item>
+        <item>Tes tertulis</item>
+        <item>Wawancara</item>
+        <item>Rekomendasi</item>
+    </string-array>
+
 </resources>
