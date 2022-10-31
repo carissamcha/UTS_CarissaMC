@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -34,7 +35,6 @@ public class MainActivity extends AppCompatActivity {
         cb_konfirmasi = findViewById(R.id.cb_konfirmasi);
         sp_jalur = findViewById(R.id.sp_jalur);
 
-//        cb_konfirmasi.setOnClickListener(MainActivity.this);
 
         btn_daftar.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -50,13 +50,25 @@ public class MainActivity extends AppCompatActivity {
                 }
                 else if (nomor.trim().equals("")){
                     et_nomor.setError("Nomor pendaftaran tidak boleh kosong");
-                } else{
+                }
+
+                else if (!cb_konfirmasi.isChecked()){
+                    Toast.makeText(MainActivity.this, "Silahkan centang konfimasi", Toast.LENGTH_SHORT).show();
+                }
+
+                else if (jalur.trim().equals("Jalur Pendaftaran")){
+                    Toast.makeText(MainActivity.this, "Silahkan Pilih Jalur Pendaftaran", Toast.LENGTH_SHORT).show();
+                }
+
+                else{
                     Intent sent = new Intent(MainActivity.this, Konfirmasi_daftar.class);
                     sent.putExtra("VarNama", nama);
                     sent.putExtra("VarNomor", nomor);
                     sent.putExtra("VarJalur", jalur);
                     startActivity(sent);
                 }
+
+
 
             }
         });
@@ -66,9 +78,9 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (cb_konfirmasi.isChecked()) {
-                    Toast.makeText(MainActivity.this, "Checkbox is Checked", Toast.LENGTH_SHORT).show();
-                } else if (!cb_konfirmasi.isChecked()){
-                    Toast.makeText(MainActivity.this, "Checkbox is not Checked", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MainActivity.this, "Terkonfirmasi", Toast.LENGTH_SHORT).show();
+                } else {
+                    Toast.makeText(MainActivity.this, "Silahkan centang konfimasi", Toast.LENGTH_SHORT).show();
                 }
             }
         });
@@ -76,5 +88,13 @@ public class MainActivity extends AppCompatActivity {
 
 
 
+                
+
+
+
+
+
+
     }
+
 }

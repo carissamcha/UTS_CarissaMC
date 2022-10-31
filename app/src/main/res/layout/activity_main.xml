@@ -33,6 +33,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Nomor Pendaftaran"
+        android:inputType="number"
         android:layout_marginTop="160sp"
         android:layout_marginLeft="40sp"
         android:layout_marginRight="40sp"

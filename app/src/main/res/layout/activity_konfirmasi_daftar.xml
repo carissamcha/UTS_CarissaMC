@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:layout_margin="16dp"
+    android:layout_margin="20dp"
     tools:context=".Konfirmasi_daftar">
 
 
@@ -21,6 +21,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Nama"
+        android:textSize="20dp"
         android:id="@+id/tvNama"
         android:layout_marginTop="20dp"
         />
@@ -29,6 +30,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="nomor"
+        android:textSize="20dp"
         android:id="@+id/tvNomor"
         android:layout_marginTop="20dp"
         />
@@ -37,6 +39,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Tertulis"
+        android:textSize="20dp"
         android:id="@+id/tvOpt"
         android:layout_marginTop="20dp"
         />
